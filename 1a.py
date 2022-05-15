@@ -1,0 +1,9 @@
+import sqlite3
+conn = sqlite3.connect('movie.db') 
+conn.cursor()
+
+conn.execute('CREATE TABLE IF NOT EXISTS MoviesINFO(Movie VARCHAR,Actor TEXT,ReleaseYear INT,Director TEXT)')
+print('Table created inside db')
+
+conn.commit()
+conn.close()
